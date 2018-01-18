@@ -1,0 +1,40 @@
+<!-- base.html handles basic page structure -->
+<!-- Note that the jinja2 template engine will replace -->
+<!-- the curly brace blocks with corresponding values passed -->
+<!-- put stuff you want on every page in here -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+    <head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mystyle.css') }}">
+    {% if title %}
+        <title> {{ title }} </title>
+    {% else %}
+       <title> Application Tools</title>
+    {% endif %}
+    </head>
+
+    <body>
+        <div>
+          Tools:
+          <a href="/index">Home</a>
+          <a href="/login">Login</a>
+          <a href="/bizclass">Business Classification</a>
+        </div>
+        <hr>
+        <!-- if you've got cached flash messages process them, they then flush -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+          {% for message in messages %}
+          <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        <!-- this next line is a place holder where derived templates -->
+        <!-- insert themselves. Note that blocks are given unqique names -->
+        <!-- like "content" so that derived templates can reference them -->
+        {% block content %}{% endblock %}
+    </body>
+</html>

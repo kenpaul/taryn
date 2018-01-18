@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    background-color: #A9CCE3
+  }
+
+  /* The navbar container */
+.menu {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* borders */
+div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+/* Create two columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+}
+/* Left and right column */
+.column.side {
+    width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+/* Navbar links */
+.menu a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Links - change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+  /* Style the header */
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    }
+
+    /* Style the footer */
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: left;
+}
+
+  /* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    }
+
+  /* Style the topnav links */
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+
+  /* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    }

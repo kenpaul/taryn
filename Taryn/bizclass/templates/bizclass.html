@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Business Class Modeling</h1>
+    <hr>
+    <!-- Note that is action set to "" (blank) then URL in in address bar is used -->
+    <form action="" method="post">
+      {{ form.hidden_tag()}}
+      <!-- note that this protects from CSRF attack, need SECRET_KEY set though -->
+      <p>
+        {{form.application.label}}
+        {{form.application(size=32)}}
+        {% for error in form.application.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+        {{ form.q0.label }}<br>
+        {{ form.q0 }}
+        <br>
+      <p>
+        {{form.q1.label}}<br>
+        {{form.q1(size=32)}}
+        {% for error in form.q1.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q2.label}}<br>
+        {{form.q2(size=32)}}
+        {% for error in form.q2.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q3.label}}<br>
+        {{form.q3(size=32)}}
+        {% for error in form.q3.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q4.label}}<br>
+        {{form.q4(size=32)}}
+        {% for error in form.q4.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q5.label}}<br>
+        {{form.q5(size=32)}}
+        {% for error in form.q5.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q6.label}}<br>
+        {{form.q6(size=32)}}
+        {% for error in form.q6.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q7.label}}<br>
+        {{form.q7(size=32)}}
+        {% for error in form.q7.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q8.label}}<br>
+        {{form.q8(size=32)}}
+        {% for error in form.q8.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q9.label}}<br>
+        {{form.q9(size=32)}}
+        {% for error in form.q9.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q10.label}}<br>
+        {{form.q10(size=32)}}
+        {% for error in form.q10.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q11.label}}<br>
+        {{form.q11(size=32)}}
+        {% for error in form.q11.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q12.label}}<br>
+        {{form.q12(size=32)}}
+        {% for error in form.q12.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q13.label}}<br>
+        {{form.q13(size=32)}}
+        {% for error in form.q13.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q14.label}}<br>
+        {{form.q14(size=32)}}
+        {% for error in form.q14.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q15.label}}<br>
+        {{form.q15(size=32)}}
+        {% for error in form.q15.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{form.q16.label}}<br>
+        {{form.q16(size=32)}}
+        {% for error in form.q16.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>{{form.remember_me()}} {{form.remember_me.label}}</p>
+      <p>{{form.submit()}}</p>
+    </form>
+{% endblock %}
