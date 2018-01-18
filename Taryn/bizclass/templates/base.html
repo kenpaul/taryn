@@ -15,12 +15,15 @@
     </head>
 
     <body>
-        <div>
+      <!-- Site navigation menu -->
+        <div class="topnav">
           Tools:
           <a href="/index">Home</a>
           <a href="/login">Login</a>
           <a href="/bizclass">Business Classification</a>
         </div>
+
+
         <hr>
         <!-- if you've got cached flash messages process them, they then flush -->
         {% with messages = get_flashed_messages() %}
